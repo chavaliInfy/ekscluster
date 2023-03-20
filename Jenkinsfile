@@ -39,7 +39,7 @@ pipeline {
 			dir('.') {
 			 //	withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'AWS_Credentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
 					// withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'genawsid', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-		                          withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'cred-dev-ecr-jenkins-eks-new', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+		                          withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'Access key ID', credentialsId: 'a7d4cb47-70a7-4ab7-ad86-9a62fd8da6fa', secretKeyVariable: 'Secret access key']]) {
 		
 						//       withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'cred-dev-ecr-jenkins-eks-new', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) { 
 	
@@ -69,7 +69,7 @@ pipeline {
 			script {
 			dir('.') {
 				// withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'cred-dev-ecr-jenkins-eks-new', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-				withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'genawsid', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+				withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'Access key ID', credentialsId: 'a7d4cb47-70a7-4ab7-ad86-9a62fd8da6fa', secretKeyVariable: 'Secret access key']]) {
 					if (fileExists('$HOME/.kube')) {
 					echo '.kube Directory Exists'
 				} else {
@@ -96,7 +96,7 @@ pipeline {
         script {
 			dir('.') {
 				# withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'cred-dev-ecr-jenkins-eks-new', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-				withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'genawsid', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+				withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'Access key ID', credentialsId: 'a7d4cb47-70a7-4ab7-ad86-9a62fd8da6fa', secretKeyVariable: 'Secret access key']]) {
 				sh """
 				terraform workspace select ${params.cluster}
             # terraform workspace select demo-aspire1
